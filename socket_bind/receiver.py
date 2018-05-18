@@ -44,28 +44,32 @@ while 4 >  2 :
 	data = r.recvfrom(1000)
 	#print("data==>",data[0].decode())
 	#print("Ip==>",data[1])		
-
+	
+	string = data[0].decode()
 	#data_received = data[0].decode().strip().split()
 	
 
 	## as list formed already has the feature of strip and split so no need to write it again else list is formed inside list ##
-	data_received = data[0].decode()
-	list_data.append(data_received)
+	#data_received = data[0].decode()
+	data_received = string.strip().split()
+
 	count+=1
+
+	for i in range(0,len(data_received)):
+		list_data.append(data_received[i])
+	
+
 	if(count == 10):
 		if(not_first_time == 0):
 			first_time = 1
 		else:
 			first_time = 0
 		entered = 1	
-		#for i in list_data:
-		#	print(i)
-		#print(list_data)
+		
 		count = 0 ## for the next iteration of data reception
+
 		not_first_time = 1 
-		#unique_element_list = list_data
-		#for i,j in range(0,len(unique_element_list)),range(0,len(list_data)):
-		#print("length of list_data :  ",len(list_data))
+		
 		variables.append(list_data[0])
 		
 		for i in range(0,len(list_data)):			
