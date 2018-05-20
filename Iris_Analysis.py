@@ -41,11 +41,6 @@ predicted_out_versicolor = predicted_versicolor[0:49]
 predicted_out_verginica = predicted_verginica[0:49]
 
 
-predicted_out_sentosa = predicted_out_sentosa.tolist()
-predicted_out_versicolor = predicted_out_versicolor.tolist()
-predicted_out_verginica = predicted_out_verginica.tolist()
-
-
 #print("predicted_sentosa ",predicted_sentosa)
 
 # for output take 1 lat data ie 0 for setos to have predicted o/p for m/c 
