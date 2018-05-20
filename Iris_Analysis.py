@@ -3,6 +3,7 @@
 from sklearn import tree
 from sklearn.datasets import load_iris
 import numpy as np
+import matplotlib.pyplot as plt
 
 # store load_iris() into some variable to access it using iris_name in future
 iris = load_iris()
@@ -99,3 +100,11 @@ else:
 	print("The given input is for flower:Verginica")
 '''
 
+
+
+
+plt.scatter(train_sentosa,train_versicolor,color='r',marker='*',label="sent-vers")
+plt.scatter(train_versicolor,train_verginica,color='y',marker='*',label="vers-verg")
+plt.scatter(train_sentosa,train_verginica,color='g',marker='*',label="sent-verg")
+plt.show()
+plt.legend()
